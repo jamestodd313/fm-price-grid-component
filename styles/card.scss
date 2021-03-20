@@ -1,0 +1,121 @@
+// COLORS
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+.bg-cyan{
+    background: $cyan;
+}
+.bg-light-cyan{
+    background:hsl(179, 55%, 47%);
+}
+.bg-yellow{
+    background: $bright-yellow;
+}
+
+// TYPOGRAPHY
+*{
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+.txt-cyan{
+    color: $cyan;
+}
+.txt-yellow{
+    color: $bright-yellow;
+}
+.txt-gray{
+    color: $grayish-blue;
+}
+.txt-white{
+    color: white;
+}
+.txt-light{
+    color: rgba(255,255,255,0.5);
+}
+p{
+    line-height: calc(1em * 1.618);
+    font-weight: 400;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    @media screen and (min-width: 992px){
+        font-size: 20px;
+    }
+}
+h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+.txt-big{
+    font-size: 32px;
+}
+.txt-small{
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+}
+
+
+
+.card{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.05);
+    overflow: hidden;
+    max-width: 40vw;
+    .card-section{
+        padding: 16px 24px;
+        .price{
+            span{
+                vertical-align: middle;
+            }
+        }
+        .cta-btn{
+            margin-top: 24px;
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            border: none;
+            display: block;
+            font-weight: 700;
+            transition: 0.2s;
+            &:hover, &:focus{
+                box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+            }
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                line-height: 18px;
+            }
+        }
+    }
+    @media screen and (min-width: 992px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        .card-header{
+            grid-column: 1 / span 2;
+        }
+        .card-section{
+            padding: 24px 32px;
+        }
+    }
+
+}
+
+
+
+
+body{
+    margin: 0;
+    padding: 0px 24px;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: $light-gray;
+}
